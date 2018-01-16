@@ -14,7 +14,7 @@
       // Checking for existing table
       if ($result = $this->query("SHOW TABLES LIKE '".$table."'")) {
         if($result->num_rows == 1) {
-            echo "Table exists. Skipping Creating table. Moving on to insertion";
+            // echo "Table exists. Skipping Creating table. Moving on to insertion";
             return true;
         }
       }
