@@ -1,0 +1,25 @@
+*{
+  margin:0px;
+  padding:0px;
+}
+
+body{
+  width:100%;
+  min-height:100vh;
+  height:100%;
+  background: radial-gradient(#d15959 5%,#CF4647 95%);
+  padding:20px;
+  box-sizing: border-box;
+  color: #fff;
+}
+
+.import{
+  width:100%;
+  padding:20px;
+  background: #f4f4f4;
+  border-radius: 5px;
+}
+
+.output{
+  margin-top:30px;
+}
