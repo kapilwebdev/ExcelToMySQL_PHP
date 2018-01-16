@@ -27,10 +27,10 @@
       $createTable = "CREATE TABLE ".$table."(id INT(11) NOT NULL AUTO_INCREMENT ,".$this->columnName." varchar(20), PRIMARY KEY (`id`))";
       echo $createTable;
       if($this->query($createTable)){
-        echo "Created ";
+        // echo "Created ";
         return true;
       } else {
-        echo "Not Created".$this->error;
+        // echo "Not Created".$this->error;
         return false;
       }
     }
@@ -42,11 +42,11 @@
           $value = "'".implode("','",$row)."'";
           if($count!=0){
             $q="INSERT INTO ".$table." VALUES('".$count."',".$value.")";
-            echo $q;
+            // echo $q;
             if($this->query($q)){
               // echo "done";
             } else {
-              echo $this->error;
+              // echo $this->error;
             }
           }
           $count++;

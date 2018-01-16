@@ -41,9 +41,9 @@
           <div class="card-body">
             <div class="import">
               <form method="post" enctype="multipart/form-data"  class="text-primary">
-                <input type="file" name="file">
+                <input type="file" name="file" id="fileInput">
                 <br><br>
-                <input type="submit" name="submit" value="Import" class="btn btn-primary">
+                <input type="submit" name="submit" value="Import" class="btn btn-primary" disabled>
                 <p class="text-muted">Please select a .csv file</p>
               </form>
             </div>
@@ -97,6 +97,22 @@
   <?php endif; ?>
 
 
+  <script
+    src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(
+    function(){
+        $('input:file').change(
+            function(){
+                if ($(this).val()) {
+                    $('input:submit').attr('disabled',false);
+                }
+            }
+            );
+    });
+</script>
   </body>
 </html>
